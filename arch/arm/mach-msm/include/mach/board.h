@@ -410,7 +410,9 @@ struct msm_panel_common_pdata {
 	int (*bkl_enable)(int);
 	int fpga_3d_config_addr;
 	struct gamma_curvy *abl_gamma_tbl;
+#if defined(CONFIG_MACH_PYRAMID) || defined(CONFIG_MACH_DOUBLESHOT)
 	struct mdp_reg *color_enhancment_tbl;
+#endif
 };
 
 struct lcdc_platform_data {
@@ -517,6 +519,7 @@ struct msm_vidc_platform_data {
 	int memtype;
 	u32 enable_ion;
 	int disable_dmx;
+	int disable_fullhd;
 #ifdef CONFIG_MSM_BUS_SCALING
 	struct msm_bus_scale_pdata *vidc_bus_client_pdata;
 #endif

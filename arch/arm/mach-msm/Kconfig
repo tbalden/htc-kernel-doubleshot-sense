@@ -631,6 +631,13 @@ config MACH_PYRAMID
 	help
 	  Support for the Pyramid device.
 
+config MACH_DOUBLESHOT
+	depends on ARCH_MSM8X60
+	default n
+	bool "doubleshot"
+	help
+	  Support for the Doubleshot device.
+
 config MACH_SHOOTER
 	depends on ARCH_MSM8X60
 	default n
@@ -1795,6 +1802,12 @@ config HTC_HEADSET_GPIO
 	default n
 	help
 	  Provides support of HTC GPIO headset detection.
+
+config MICROP_COMMON
+	tristate "MICROP COMMON Driver"
+	depends on I2C
+	help
+	  HTC Microp-P support.
 
 config HTC_HEADSET_MICROP
 	tristate "HTC Micro-P headset detection driver"
