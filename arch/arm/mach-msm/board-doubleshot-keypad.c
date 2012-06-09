@@ -288,7 +288,7 @@ static struct gpio_event_direct_entry doubleshot_microp_key_map[] = {
 		.gpio = 1 << 7,
 	},
 	{
-		.code = BTN_MOUSE,
+		.code = KEY_F23,
 		.gpio = 1 << 8,
 	},
 };
@@ -343,7 +343,7 @@ static struct keyreset_platform_data doubleshot_reset_keys_pdata = {
 	.keys_down = {
 		KEY_POWER,
 		KEY_VOLUMEDOWN,
-		BTN_MOUSE,
+		KEY_F23,
 		0
 	},
 };
